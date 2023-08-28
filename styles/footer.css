@@ -1,0 +1,146 @@
+/* ------ Brand Info ------ */
+.footer-brand-info {
+    background-color: var(--light-blue);
+    display: grid;
+    grid-template-areas:
+        "logo"
+        "list"
+        "contact";
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.footer-brand-info__image-col {
+    grid-area: logo;
+}
+
+.footer-brand-info__about-list-col {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list-item a {
+    color: #000000;
+}
+
+.footer-brand-info__contact-col {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.footer-brand-info__contact-col h3 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.contact-col__name-input {
+    color: var(--gray);
+    width: 20.5rem;
+    height: 3.5rem;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.contact-col__name-textarea {
+    background-color: var(--white);
+    color: var(--gray);
+    width: 20.5rem;
+    /* testar com % */
+    height: 5.125rem;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.contact-col__name-input input,
+.contact-col__name-textarea textarea {
+    width: calc(100% - 1rem);
+    height: calc(100% - 2rem);
+    font-size: 1rem;
+    padding: 1rem .5rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid var(--gray-2);
+    outline: none;
+}
+
+.contact-col__name-input label,
+.contact-col__name-textarea label {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+}
+
+.contact-col__name-input input:focus~label,
+.contact-col__name-input input:valid~label,
+.contact-col__name-textarea textarea:focus~label,
+.contact-col__name-textarea textarea:valid~label {
+    font-size: .75rem;
+    top: 5px;
+}
+
+.footer-brand-info__contact-col .primary-btn {
+    padding: 0.75rem 1rem;
+}
+
+
+/* ------ Creator Info ------ */
+.footer-creator-info {
+    padding: 2rem;
+}
+
+.footer-creator-info a {
+    color: var(--black);
+}
+
+/* ------ Tablets ------ */
+@media (min-width: 760px) {
+    .footer-brand-info {
+        grid-template-areas:
+            "logo contact"
+            "list contact";
+        column-gap: 7rem;
+        padding: 2rem;
+    }
+
+    .footer-brand-info__about-list-col {
+        align-items: flex-start;
+    }
+
+    .list-iteml a:hover {
+        color: var(--main-blue);
+    }
+
+    .contact-col__name-input,
+    .contact-col__name-textarea {
+        width: 27.125rem;
+    }
+}
+
+/* ------ Desktop ------ */
+@media (min-width: 1300px) {
+    .footer-brand-info {
+        grid-template-areas: "logo list contact";
+        padding: 4rem;
+    }
+
+    .footer-brand-info__about-list-col {
+        gap: 2rem;
+    }
+    .contact-col__name-input,
+    .contact-col__name-textarea {
+        width: 35rem;
+    }
+
+    .footer-brand-info__contact-col .primary-btn {
+        width: 10.312rem;
+        padding: 1rem;
+    }
+}

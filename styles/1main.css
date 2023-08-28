@@ -1,0 +1,111 @@
+main {
+    width: 71rem;
+    margin: 2rem auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 252px;
+    column-gap: 1rem;
+    row-gap: .7rem;
+    margin: 4rem 0;
+}
+
+.products__title {
+    grid-column: 1/6;
+    justify-self: left;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.products__link {
+    grid-column: 6/7;
+    color: var(--main-blue);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.products__link :hover{
+    text-decoration: underline;
+    color: var(--btn-primary-hover);
+}
+
+.products__product-card {
+    /* width: 100%;
+    height: 100%; */
+}
+.product-card__image {
+    width: 100%;
+    height: 70%;
+    margin-bottom: .5rem;
+}
+
+.product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.product-card__info__product-name {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.product-card__info__product-price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-card__info__product-link {
+    color: var(--main-blue);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-card__info__product-link:hover {
+    text-decoration: underline;
+    color: var(--btn-primary-hover);
+}
+
+/* --- Media Queries ---- */
+
+@media (max-width: 1150px) {
+    main {
+        width: 95%;
+    }
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    .products__title {
+        grid-column: 1/4;
+    }
+    .products__link {
+        grid-column: 4/5;
+    }
+    .products__product-card:nth-child(7),
+    .products__product-card:nth-child(8) {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) { 
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 252px 252px;
+        row-gap: 2rem;
+        margin: 3.5rem 0;
+    }
+    .products__title {
+        grid-column: 1/2;
+    }
+    .products__link {
+        grid-column: 2/3;
+    }
+}
