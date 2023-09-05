@@ -1,0 +1,76 @@
+/* Estilos da página de login */
+.login-main {
+    width: 75%;
+    margin: 2.5rem auto;
+}
+
+.login-main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-main__form h1 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form__input-wrapper {
+    background-color: var(--white);
+    width: 17.187rem;
+    height: 2.6rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.form__input-wrapper input {
+    width: calc(100% - 1rem);
+    height: calc(100% - 0.6rem);
+    color: var(--black);
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.1rem 0.5rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid var(--gray-2);
+    outline: none;
+}
+
+.form__input-wrapper label {
+    color: var(--gray);
+    position: absolute;
+    top: 13px;
+    left: 5px;
+}
+
+.form__input-wrapper input:focus~label,
+.form__input-wrapper input:valid~label {
+    font-size: 0.65rem;
+    top: 3px;
+}
+
+.login-main__form .primary-btn {
+    width: 6.812rem;
+    height: 2.5rem;
+    padding: 0.75rem 1rem;
+}
+
+/* ------ Tablet ------ */
+@media (min-width: 1300px) {
+    .login-main__form h1 {
+        font-size: 1.125rem;
+    }
+    .form__input-wrapper {
+        width: 26.437rem;
+        height: 3.937rem;
+    }
+    
+    .form__input-wrapper label {
+        top: 20px;
+    }
+
+    .login-main__form .primary-btn {
+        width: 26.437rem;
+        height: 3.875rem;
+    }
+}

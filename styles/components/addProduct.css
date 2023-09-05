@@ -1,0 +1,81 @@
+/* Botão do header */
+.nav .secondary-btn {
+    padding: 0.75rem 1rem;
+}
+
+.create-product-main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.create-product-main__form h2 {
+    align-self: self-start;
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+
+.create-product__form__input-wrapper {
+    background-color: var(--white);
+    width: 100%;
+    /* width: 20.5rem; */
+    height: 3.5rem;
+    position: relative;
+}
+
+.create-product__form__input-wrapper:last-child {
+    height: 5.125rem;
+}
+
+.create-product__form__input-wrapper input, 
+.create-product__form__input-wrapper textarea {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 5px;
+    border-bottom: 1px solid var(--gray-2);
+
+
+    position: absolute;
+    top: 12px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.create-product__form__input-wrapper textarea {
+    top: 18px;
+}
+
+.create-product__form__input-wrapper label {
+    color: var(--gray);
+    font-size: 0.75rem;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+
+.create-product-main__form .primary-btn {
+    width: 100%;
+    height: 3.187rem;
+    padding: 1rem;
+}
+
+/* ------ Tablet ------ */
+@media (min-width: 760px) {
+    .create-product-main__form {
+        padding: 2rem;
+    }
+}
+
+/* ------ Desktop ------ */
+@media (min-width: 760px) {
+    .create-product-main  {
+        width: 45%;
+        margin: 0 auto;
+    }
+    .create-product-main__form h2 {
+        font-size: 2rem;
+    }
+}
