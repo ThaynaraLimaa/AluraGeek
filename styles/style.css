@@ -8,6 +8,7 @@
 @import url('components/login.css');
 @import url('components/products.css');
 @import url('components/addProduct.css');
+@import url('components/productInfo.css');
 
 * {
     text-decoration: none;

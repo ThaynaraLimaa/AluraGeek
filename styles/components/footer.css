@@ -92,6 +92,7 @@
 
 /* ------ Creator Info ------ */
 .footer-creator-info {
+    background-color: var(--white);
     padding: 2rem;
 }
 

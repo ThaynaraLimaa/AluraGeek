@@ -1,0 +1,179 @@
+.productInfo-main {
+    background-color: var(--white);
+}
+
+/* -- Product Info -- */
+.product-info-grid {
+    display: grid;
+    grid-template-areas:
+        "image"
+        "info";
+    grid-template-rows: 12rem auto;
+}
+
+.product-info-grid__image {
+    grid-area: image;
+}
+
+.product-info-grid__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info-grid__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.product-info-grid__info__title {
+    font-size: 1.375rem;
+    font-weight: 400;
+}
+
+.product-info-grid__info__price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-info-grid__info__description {
+    text-align: left;
+    font-size: 0.875rem;
+}
+
+/* -- Similars -- */
+.similar-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 15.5625rem);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.similar-products-grid__title {
+    grid-column: 1/3;
+    justify-self: left;
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+
+/* Cards */
+.similar-products-grid__card__image-wrapper {
+    width: 100%;
+    height: 66%;
+    margin-bottom: 0.5rem;
+}
+
+.similar-products-grid__card__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.similar-products-grid__card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.card__info__name {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.card__info__price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card__info__link {
+    color: var(--main-blue);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.similar-products-grid__card:nth-child(5),
+.similar-products-grid__card:nth-child(6) {
+    display: none;
+}
+
+/* ------ Tablets ------ */
+@media (min-width: 760px) {
+    .productInfo-main {
+        background-color: var(--background-white);
+    }
+
+    /* -- Product Info -- */
+    .product-info-grid {
+        grid-template-areas: "image info";
+        grid-template-rows: 9.812rem auto;
+        column-gap: 1rem;
+        padding: 2rem;
+    }
+
+    .card__info__link:hover {
+        color: var(--btn-primary-hover);
+        text-decoration: underline;
+    }
+
+    /* -- Similars -- */
+    .similar-products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 15.75rem;
+        padding: 2rem;
+    }
+
+    .similar-products-grid__title {
+        grid-column: 1/5;
+    }
+
+    .card__info__link {
+        font-size: 1rem;
+    }
+}
+
+/* ------ Desktop ------ */
+@media (min-width: 1300px) {
+    .productInfo-main {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    /* -- Product Info -- */
+    .product-info-grid {
+        grid-template-rows: 25.25rem auto;
+        grid-template-columns: 35rem auto;
+    }
+
+    .product-info-grid__info {
+        align-self: center;
+    }
+
+    .product-info-grid__info__title {
+        font-size: 3.25rem;
+    }
+
+    .product-info-grid__info__description {
+        font-size: 1rem;
+    }
+
+    /* -- Similars -- */
+    .similar-products-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .similar-products-grid__title {
+        grid-column: 1/7;
+        font-size: 2rem;
+    }
+
+    .similar-products-grid__card:nth-child(5),
+    .similar-products-grid__card:nth-child(6) {
+        display: block;
+    }
+}
